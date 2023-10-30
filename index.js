@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
+app.use(cors(corsOptions));
 mongoose.connect(
   "mongodb+srv://Arun:123@cluster0.ynhdskj.mongodb.net/hospital?retryWrites=true&w=majority",
   {
@@ -9,7 +9,7 @@ mongoose.connect(
     useUnifiedTopology: true,
   }
 );
-
+app.use(cors());
 app.use(express.json());
 
 const authRoutes = require("./routes/auth");
