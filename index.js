@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-app.use(cors(corsOptions));
+const cors = require("cors");
 mongoose.connect(
   "mongodb+srv://Arun:123@cluster0.ynhdskj.mongodb.net/hospital?retryWrites=true&w=majority",
   {
